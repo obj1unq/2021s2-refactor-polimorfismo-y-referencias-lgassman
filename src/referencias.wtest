@@ -5,21 +5,18 @@ test "efecto por un tercero" {
 	virtuoso.tocar()
 	principiante.suenaLindo()
 
-	assert.that(true)
 }
 
 test "uso un objeto que nada que ver ¿andará?" {
 	principiante.instrumento(equipoChico)
 	principiante.tocar()
 	principiante.suenaLindo()
-	assert.that(true)
 }
 
 test "uso otro objeto que nada que ver ¿andará?" {
 	guitarraElectrica.equipo(zapato)
 	principiante.suenaLindo()
 	principiante.tocar()
-	assert.that(true)
 }
 
 test "autoreferencia" {
@@ -28,5 +25,4 @@ test "autoreferencia" {
 	principiante.suenaLindo()
 	principiante.tocar()
 	principiante.suenaLindo()
-	assert.that(true)
 }

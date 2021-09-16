@@ -15,11 +15,13 @@
  */
 
 object virtuoso {
+		
 	var property instrumento = guitarraElectrica
 	
 	method suenaLindo() {
 		return true 
 	}
+	
 	
 	method tocar() {
 		//repite 10 veces instrumento.usar(). 
@@ -33,15 +35,24 @@ object virtuoso {
 }
 
 object principiante {
-	var property instrumento = guitarraElectrica
+	var instrumento = guitarraElectrica
 	
 	method suenaLindo () {
-		 return !instrumento.gastado()
+		 return not instrumento.gastado()
 	}
 
 	method tocar() {
 		instrumento.usar()
 	}
+	
+	method instrumento(_instrumento) {
+		instrumento = _instrumento
+	}
+	
+	method instrumento() {
+		return instrumento
+	}
+	
 }
 
 
@@ -57,6 +68,10 @@ object guitarraElectrica {
 		return equipo.gastado()
 	}
 	
+	method equipo(_equipo) {
+		equipo = _equipo
+	}
+	
 }
 
 object guitarraElectroAcustica {
@@ -64,7 +79,7 @@ object guitarraElectroAcustica {
 	var property usado = false
 	
 	method usar() {
-		if( ! equipo.gastado()) { 
+		if( not equipo.gastado()) { 
 			usado = true
 			equipo.usar()
 		}
